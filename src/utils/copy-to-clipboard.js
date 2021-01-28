@@ -1,7 +1,6 @@
 // https://github.com/gatsbyjs/gatsby/blob/master/www/src/utils/copy-to-clipboard.js
 
 export const copyToClipboard = str => {
-
   const clipboard = window.navigator.clipboard
 
   /*
@@ -13,7 +12,6 @@ export const copyToClipboard = str => {
    */
 
   if (!clipboard || typeof clipboard.writeText !== `function`) {
-
     const textarea = document.createElement(`textarea`)
 
     textarea.value = str
@@ -45,9 +43,7 @@ export const copyToClipboard = str => {
     document.body.removeChild(textarea)
 
     return Promise.resolve(true)
-
   }
 
   return clipboard.writeText(str)
-
 }

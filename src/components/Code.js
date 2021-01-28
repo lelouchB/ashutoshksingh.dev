@@ -35,23 +35,22 @@ const LineNo = styled.span`
 `
 
 const CopyCode = styled.button`
-position: absolute;
-padding:5px;
-right: 0.25rem;
-cursor:pointer;
-border: 0;
+  position: absolute;
+  padding: 5px;
+  right: 0.25rem;
+  cursor: pointer;
+  border: 0;
 
-border-radius: 3px;
+  border-radius: 3px;
 
-margin: 0.25em;
+  margin: 0.25em;
 
-opacity: 0.3;
+  opacity: 0.3;
 
-&:hover {
-
-  opacity: 1;
-
-}`
+  &:hover {
+    opacity: 1;
+  }
+`
 
 export const Code = ({ codeString, language, ...props }) => {
   if (props["react-live"]) {
