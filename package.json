@@ -1,0 +1,49 @@
+{
+    "name": "gatsby-starter-blog",
+    "private": false,
+    "description": "Gatsby Starter Blog built with MDX and Styled Components.",
+    "version": "0.1.0",
+    "author": "Ashutosh K Singh",
+    "license": "BSD",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+        "start": "npm run develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean"
+    },
+    "dependencies": {
+        "@mdx-js/mdx": "^1.6.22",
+        "@mdx-js/react": "^1.6.22",
+        "babel-plugin-styled-components": "^1.12.0",
+        "gatsby": "^2.26.1",
+        "gatsby-image": "^2.7.0",
+        "gatsby-plugin-feed": "^2.9.0",
+        "gatsby-plugin-google-fonts": "^1.0.1",
+        "gatsby-plugin-manifest": "^2.8.0",
+        "gatsby-plugin-mdx": "^1.6.0",
+        "gatsby-plugin-react-helmet": "^3.6.0",
+        "gatsby-plugin-sharp": "^2.10.1",
+        "gatsby-plugin-sitemap": "^2.8.0",
+        "gatsby-plugin-styled-components": "^3.6.0",
+        "gatsby-remark-images": "^3.7.1",
+        "gatsby-source-filesystem": "^2.7.0",
+        "gatsby-transformer-sharp": "^2.8.0",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0",
+        "react-helmet": "^6.1.0",
+        "react-icons": "^4.1.0",
+        "styled-components": "^5.2.1"
+    },
+    "devDependencies": {
+        "prettier": "2.1.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/lelouchB/gatsby-starter-blog"
+    },
+    "bugs": {
+        "url": "https://github.com/lelouchB/gatsby-starter-blog/issues"
+    }
+}
