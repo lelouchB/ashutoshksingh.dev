@@ -1,4 +1,7 @@
+![](https://i.imgur.com/KlaIXsD.png)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/836e58cc-03e3-49e9-b5f1-6e7f126eafe7/deploy-status)](https://app.netlify.com/sites/affectionate-keller-8a9c81/deploys)
+
 
 ## Ashutosh K Singh
 ## 🚀 Quick start
