@@ -22,7 +22,7 @@ export default function Home({ data }) {
   }
   return (
     <Container>
-      <SEO title="Gatsby Starter Blog" />
+      <SEO title="Ashutosh" />
       <Bio />
 
       {posts.map(post => (

@@ -18,7 +18,25 @@ const PostWrapper = styled.div`
     color: #2e2d2f;
     margin: 0.625rem 0;
   }
+  img {
+    max-width: 480px;
+  }
 
+  pre {
+    overflow-x: auto;
+    white-space: pre-wrap;
+    border-left: 3px solid #f36d33;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 100%;
+    padding: 1em 1.5em;
+  }
+ code{
+   background:var( --colour-on-secondary,#e2e8f0 );;
+   padding:0px 3px;
+ }
   a {
     color: blue;
     text-decoration: underline;
@@ -67,6 +85,17 @@ const PostWrapper = styled.div`
   td {
     padding: 0.15rem;
     text-align: left;
+  }
+  @media print {
+    pre {
+      overflow-x: auto;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap !important;
+      white-space: -pre-wrap;
+      white-space: -o-pre-wrap;
+      word-wrap: break-word;
+      background: #fff;
+    }
   }
 `
 

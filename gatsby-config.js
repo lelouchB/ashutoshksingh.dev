@@ -1,13 +1,13 @@
 // gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Ashutosh K Singh`,
     author: {
       name: `Ashutosh Kumar Singh`,
     },
-    description: `Gatsby Starter Blog built with MDX and Styled Components.`,
+    description: `My Portfolio Website`,
     image: `/cover.png`,
-    siteUrl: `https://lelouchb-gatsby-starter-blog.netlify.app/`,
+    siteUrl: `https://ashusingh.me/`,
     social: {
       twitter: `@noharashutosh`,
     },
@@ -94,8 +94,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `Gatsby`,
+        name: `Ashutosh K Singh`,
+        short_name: `Ashu`,
         start_url: `/`,
         lang: `en`,
         background_color: `#f7f0eb`,
@@ -162,7 +162,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: "Gatsyby Starter Blog RSS Feed",
+            title: "Ashutosh K Singh Blog RSS Feed",
           },
         ],
       },

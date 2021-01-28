@@ -1,7 +1,7 @@
 {
-    "name": "gatsby-starter-blog",
+    "name": "ashutosh-k-singh",
     "private": false,
-    "description": "Gatsby Starter Blog built with MDX and Styled Components.",
+    "description": "Portfolio of Ashutosh K Singh",
     "version": "0.1.0",
     "author": "Ashutosh K Singh",
     "license": "BSD",
@@ -30,10 +30,13 @@
         "gatsby-remark-images": "^3.7.1",
         "gatsby-source-filesystem": "^2.7.0",
         "gatsby-transformer-sharp": "^2.8.0",
+        "mdx-utils": "^0.2.0",
+        "prism-react-renderer": "^1.1.1",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
         "react-helmet": "^6.1.0",
         "react-icons": "^4.1.0",
+        "react-live": "^2.2.3",
         "styled-components": "^5.2.1"
     },
     "devDependencies": {
@@ -41,9 +44,9 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/lelouchB/gatsby-starter-blog"
+        "url": "https://github.com/lelouchB/lelouchB.github.io"
     },
     "bugs": {
-        "url": "https://github.com/lelouchB/gatsby-starter-blog/issues"
+        "url": "https://github.com/lelouchB/lelouchB.github.io/issues"
     }
 }

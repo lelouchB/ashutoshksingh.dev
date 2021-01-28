@@ -1,7 +1,4 @@
-[![](https://i.imgur.com/bxHI74o.png)](https://lelouchb-gatsby-starter-blog.netlify.app/)
-
-###  Gatsby Starter Blog built with MDX and Styled Components. 
-
+### Portfolio Website of Ashutosh K Singh
 ## 🚀 Quick start
 
 1.  **Create a Gatsby site.**

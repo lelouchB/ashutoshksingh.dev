@@ -58,7 +58,7 @@ export const SEO = ({ title, lang, meta, description }) => {
         { property: "og:locale", content: lang },
         {
           property: "og:site_name",
-          content: "Gatsby Starter Blog",
+          content: "Ashutosh K Singh",
         },
         {
           property: `og:type`,
