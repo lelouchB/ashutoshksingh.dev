@@ -7,7 +7,7 @@ module.exports = {
     },
     description: `My Portfolio Website`,
     image: `/cover.png`,
-    siteUrl: `https://ashusingh.me/`,
+    siteUrl: `https://ashutoshksingh.dev/`,
     social: {
       twitter: `@noharashutosh`,
     },

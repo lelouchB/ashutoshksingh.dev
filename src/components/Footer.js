@@ -46,7 +46,7 @@ export const Footer = () => {
     githubUsername: `lelouchB`,
     twitterUsername: `noharashutosh`,
     instagramUsername: `singhashutoshk`,
-    siteUrl: `https://lelouchb-gatsby-starter-blog.netlify.app/`,
+    siteUrl: `https://ashutoshksingh.dev`,
   }
   const linkedinUrl = `https://www.linkedin.com/in/ashutosh-singh-550a6a178`
   const instagramUrl = `https://www.instagram.com/${config.instagramUsername}`
