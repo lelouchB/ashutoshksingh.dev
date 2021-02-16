@@ -1,5 +1,5 @@
 // global-styles.js
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle  } from "styled-components"
 
 export const theme = {
   colors: {
@@ -11,7 +11,7 @@ export const theme = {
     primaryLighter: "#3e3d3f",
     primaryLightest: "#464548",
   },
-  fonts: "Montserrat, Verdana,sans,  serif",
+  fonts: "Montserrat, Verdana,sans-serif",
   fontSizes: {
     small: "1em",
     medium: "1.5em",
@@ -20,6 +20,9 @@ export const theme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&family=Satisfy&display=swap');
+
 *, *:before, *:after {
     box-sizing: border-box;
     margin:0;
@@ -28,8 +31,8 @@ export const GlobalStyles = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
-    font-family: ${props => props.theme.fonts};
     background-color:#f7f7f7;
+    font-family:'Montserrat', sans-serif;
     font-size: ${props => props.theme.fontSizes.medium};
     padding: 0 1rem;
   }

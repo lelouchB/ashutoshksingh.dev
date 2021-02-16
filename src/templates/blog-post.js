@@ -102,7 +102,7 @@ const PostWrapper = styled.div`
 const TitleWrapper = styled.div`
   text-align: left;
   font-size: 2.1rem;
-  font-family: JetBrains Mono;
+  font-family: "JetBrains Mono", monospace;
   font-weight: 500;
   background: #0f2027;
   background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
