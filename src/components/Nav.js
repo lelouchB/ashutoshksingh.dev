@@ -13,7 +13,7 @@ const NavWrapper = styled.nav`
 
   a {
     text-decoration: none;
-    font-family: 'Satisfy';
+    font-family: 'Satisfy', cursive;
     color: #6a5acd;
   }
   svg {
