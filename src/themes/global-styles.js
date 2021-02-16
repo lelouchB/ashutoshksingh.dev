@@ -21,7 +21,7 @@ export const theme = {
 
 export const GlobalStyles = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat:wght@400&family=Satisfy&display=swap');
 
 *, *:before, *:after {
     box-sizing: border-box;
