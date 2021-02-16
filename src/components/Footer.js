@@ -42,7 +42,7 @@ const FooterWrapper = styled.footer`
 `
 export const Footer = () => {
   const config = {
-    email: `admin@ashusingh.me`,
+    email: `contactdenedut@gmail.com`,
     githubUsername: `lelouchB`,
     twitterUsername: `noharashutosh`,
     instagramUsername: `singhashutoshk`,
