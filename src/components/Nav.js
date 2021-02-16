@@ -4,6 +4,8 @@ import { FaRegMoon } from "react-icons/fa"
 import styled from "styled-components"
 
 const NavWrapper = styled.nav`
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Montserrat:wght@400&family=Satisfy&display=swap');
+
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -13,7 +15,7 @@ const NavWrapper = styled.nav`
 
   a {
     text-decoration: none;
-    font-family: 'Satisfy', cursive;
+    font-family: "Satisfy", cursive;
     color: #6a5acd;
   }
   svg {
