@@ -1,0 +1,920 @@
+---
+title: 10 ways to deploy a React app for free
+slug: 10-ways-to-deploy-a-react-app-for-free
+date: 2020-08-14
+tags: ["react", "react deploy", "reactjs"]
+excerpt: In this tutorial, we’ll demonstrate how to deploy a React application in 10 different ways. All the services described in this post are completely free with no hidden credit card requirements.
+---
+
+It is time that you took your applications out of development and into production. Deploying applications built on top of frameworks like React, Vue, Angular, etc. is different from sites like built only with HTML, CSS, and JS. 
+
+In this article, we will discuss the step-by-step process of deploying React application in 8 different ways. These are completely free ways of deploying, no hidden credit card requirements. So, deploy and showcase your applications to the world.
+
+
+
+# 1. Vercel
+
+[Vercel](https://vercel.com), formerly known as ZEIT, is a revolutionary serverless deployment service for various applications like React, Angular, Vue, Express, etc. You can easily import projects from GitLab or Bitbucket with Vercel. Automatic SSL is one of the cool features that it offers.
+ 
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595074514130_9hmb2Ltg.png)
+
+
+
+## Steps to Deploy
+1. Create a new account on [**Vercel**](https://vercel.com/); you can quickly login using OAuth.
+
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595074529296_aemCVwHg.png)
+
+2. After a successful login, the dashboard screen will appear. We can either deploy using this dashboard or use Vercel CLI and deploy it from the terminal. We will discuss both of them.
+
+
+## Dashboard
+
+
+1. If you want to deploy using the Vercel dashboard, the next step is to integrate GitHub or GitLab or Bitbucket, wherever your React Applications is stored. Click on **Import Project** on your panel.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595074542262_X-C2yrYg.png)
+
+2. After clicking **Import Project**, you will end up on [https://vercel.com/import](https://vercel.com/import) and will have two options either to Import Project from Git Repository or use a template which is another excellent feature of Vercel. Click **Continue** under **From Git Repository**.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595074552843_HVDQDg0w.png)
+
+3. Considering where your repository is present, you would have integrated GitHub or GitLab or Bitbucket; we will discuss GitHub here. After the previous step, you will have the option to import projects from GitHub, GitLab, and Bitbucket. Click on **Import Project from GitHub**, if this is your first time using Vercel, you will see a screen like this.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595074569612_aEj_1YFw.png)
+
+4. Click Install Now For GitHub, and you will be prompted to install Vercel for GitHub, save the setting for GitHub, and come back to [https://vercel.com/import/git](https://vercel.com/import/git) and you will see that your GitHub is now connected. Click on **Import Project from GitHub**.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595074580147_vqx8RQWA.png)
+
+5. Now you will be prompted to choose which project you want to deploy. Choose the React project and click **Import**. Now you will be prompted to write a project name, leave at default, and click **Continue.** Now you will be asked for the root directory, choose accordingly, and click **Continue.**
+
+
+6. This step is important; if you have initialized your React project using `create-react-app` then Vercel will auto-detect it and choose the suitable configuration on its own like shown below. Leave configuration at default and click **Deploy**.
+
+If your React app was not initialized using `create-react-app` , you will be asked for configuration, using the above configuration as an example, fill all the configuration fields and click **Deploy.**
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595074594497_JND1iAvw.png)
+
+
+Your React Application will now be deployed within a matter of seconds with two to three preview links. 
+
+## Vercel CLI
+1. The first step is to install vercel globally.
+
+
+     npm i -g vercel
+    // or
+     yarn global add vercel
+
+
+2. Once vercel has been installed, run the following command. 
+
+
+     vercel login
+
+You will be prompted to enter the email with which you registered on Vercel, after submitting that you will receive a mail to verify your login. Click **Verify**.
+
+
+3. The next and final step is to go to your project root directory and run the following command.
+
+
+     vercel
+
+
+4. You will then be prompted to a few questions. First, you will be asked to confirm that this is the project that you want to deploy.
+
+
+    ? Set up and deploy “path to your project”? [Y/n] y
+
+
+5. Then you will be asked which account to deploy this app. It will give you a default option, just hit enter. After this, you will be asked whether to link this to the existing project, answer **N.**
+
+
+    ? Which scope do you want to deploy to? Your Vercel Account
+    ? Link to existing project? [y/N] n
+
+
+6. You will be asked to name your project and specify the path to your project since we are already in the project directory it will be same as the default option `./`
+
+
+    ? What’s your project’s name? project-name
+    ? In which directory is your code located? ./
+
+ It will auto-detect if your project was initialized using `create-react-app`  and configure the settings; else, it will ask you to set them. Answer **No** if asked to override the settings.
+
+
+    Auto-detected Project Settings (Create React App):
+    - Build Command: `npm run build` or `react-scripts build`
+    - Output Directory: build
+    - Development Command: react-scripts start
+    ? Want to override the settings? [y/N] n
+
+Your project will be deployed now.
+
+
+    �  Deployed to production. Run `vercel --prod` to overwrite later (https://vercel.link/2F).
+## With this, your project has been successfully deployed. 
+
+Read the [Vercel Docs](https://vercel.com/docs).
+
+----------
+# 2. Firebase
+
+[Firebase](https://firebase.google.com/) is an entire platform that you can use to develop and scale your application. Along with hosting, it offers [myriad other services](https://firebase.google.com/products-build), including authentication, Cloud Firestore, cloud functions, and more.
+
+![Firebase](https://firebase.google.com/images/social.png)
+
+
+
+## Steps to Deploy
+1. If you haven’t already, create an account on [Firebase](https://console.firebase.google.com/) and then create a new project.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594793705967_image.png)
+
+2. Now install Firebase CLI globally. Having it installed globally makes it easier to use in different projects.
+
+
+     npm install -g firebase-tools
+
+
+3. The next step is to login with Firebase/Google Account.
+
+
+     firebase login
+
+You will be prompted with a URL in the terminal that will open in the browser to verify. After giving necessary permissions you will see a Login Successful message.
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594794202533_image.png)
+
+
+
+4. Next go to your project root directory and run the following command to initialize a Firebase project.
+
+
+     firebase init
+
+After that, you will be asked to confirm, reply **Yes**.
+
+
+     ? Are you ready to proceed? Yes
+
+Then chose Hosting option out the given options.
+
+
+    ? Which Firebase CLI features do you want to setup for this folder? Press Space to select features, then Enter to confirm your choices.
+     ◯ Database: Deploy Firebase Realtime Database Rules
+     ◯ Firestore: Deploy rules and create indexes for Firestore
+     ◯ Functions: Configure and deploy Cloud Functions
+    ❯◯ Hosting: Configure and deploy Firebase Hosting sites
+     ◯ Storage: Deploy Cloud Storage security rules
+
+Then you will be asked to choose the Firebase project associated with your application and since we have already created a project in the first step choose `Use an existing project` else you can select `Create a new project` . 
+
+
+    === Project Setup
+    
+    First, let's associate this project directory with a Firebase project.
+    You can create multiple project aliases by running firebase use --add,
+    but for now we'll just set up a default project.
+    
+    ? Please select an option: (Use arrow keys)
+    > Use an existing project
+      Create a new project
+      Add Firebase to an existing Google Cloud Platform project
+      Don't set up a default project
+
+If you choose to  `Create a new project` you will be asked to provide a unique project id, after which a new project will be created for your project.
+
+Lastly, we will need to change the default *public* folder to *build* folder for our `create-react-app` project. If you have not initialized the project with `create-react-app` choose the appropriate build folder.
+
+    === Hosting Setup
+    
+    Your public directory is the folder (relative to your project directory) that
+    will contain Hosting assets to be uploaded with firebase deploy. If you
+    have a build process for your assets, use your build's output directory.
+    
+    ? What do you want to use as your public directory? build
+    ? Configure as a single-page app (rewrite all urls to /index.html)? Yes
+
+If you have already *build* the project you will be asked whether to **Overwrite** or not. Answer **No**.
+
+
+    ? File public/index.html already exists. Overwrite? No
+
+With this, `firebase init`  is complete. And before proceeding to the next step, *build* your React project.
+
+
+     npm run build
+
+
+5. The next and final step is to deploy the project. Run the following command to do so.
+
+
+     firebase deploy
+
+Once the process completes, you will see the deployed links in the terminal
+
+
+    +  Deploy complete!
+    
+    Project Console: https://console.firebase.google.com/project/react-project/overview
+    Hosting URL: https://react-project.web.app
+## With this, your project has been successfully deployed. 
+
+Read more about [Firebase Hosting](https://firebase.google.com/docs/hosting/).
+
+
+----------
+# [Netlify](https://www.netlify.com/)
+
+Netlify is one of the popular services out there for web deployment. It easily imports projects from GitHub, GitLab, and Bitbucket and is widely used with Jamstack. A cool feature that you will explore when you are deploying with Netlify is that it creates a random name for every project which are quite catchy. 
+
+
+![https://www.netlify.com/img/global/meta-image.jpg](https://www.netlify.com/img/global/meta-image.jpg)
+
+
+
+## Steps to deploy
+1. Create a [Netlify account](https://app.netlify.com/signup), if you haven’t already.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594795753577_image.png)
+
+2. Like Vercel we have two choices to deploy our app either through **Netlify Dashboard** or **Netlify CLI**.
+
+
+## Netlify Drag n Drop
+1. A very cool feature that Netlify offers is you can **drag and drop** your site folder, and your app will be deployed like magic. 
+
+For our React App, we will have to drag and drop out ***build*** ****folder on Netlify Dashboard. ( Run `npm run build`  beforehand to deploy the latest build)
+
+![GIF credits : Netlify YouTube](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595062004669_ezgif.com-video-to-gif2.gif)
+
+
+
+2. Else you can connect GitHub or GitLab or Bitbucket, wherever your project is stored.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594796865488_image.png)
+
+3. Then you will need to choose the project repository that you need to deploy.
+
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594796997962_image.png)
+
+4. Once you have selected the project, the final steps will be the configurations that Netlify will auto-detect if the project is initialized with `create-react-app`.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594797130512_image.png)
+
+5. Click **Deploy site** ****and your app will be deployed.
+
+
+## Netlify CLI
+1. If you prefer deploying apps through the terminal, here are the steps to do so with Netlify CLI. To deploy the latest build run `npm run build` beforehand.
+2. The next step is to install `netlify-cli` globally.
+
+
+     npm install netlify-cli -g
+
+
+3. Then in your project root directory run the following command. 
+
+
+     netlify deploy
+
+
+    You might be prompted to grant access to Netlify CLI, click **Authorize.**
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594987031120_image.png)
+
+    After successful authorization, you will a login success message in the terminal.
+    
+    You are now logged into your Netlify account!
+    
+4. Now, the following steps will guide you through the prompts that you will encounter in the terminal. First, you will be asked to link this project to a site, since this is the first time you are deploying this app, select `Create  configure a new site`.
+
+
+    This folder isn't linked to a site yet
+    ? What would you like to do?
+    > Link this directory to an existing site
+    > Create  configure a new site
+
+
+5. Then you will asked be for the `Team`, unless you are already using Netlify in your local machine, chances are you will see only one option with your name, select it. 
+
+
+    ? Team:
+    > ASHUTOSH KUMAR SINGH's team 
+
+There might also be a chance that you are not asked for `Team`.
+
+
+6. The next prompt is `Site name`, this is an optional field as you can see below if you already have a name in mind type that and hit enter. In case you leave this blank Netlify will give this site a random name, and you can change it later.
+
+
+    Choose a unique site name (e.g. netlify-thinks-lelouchB-is-great.netlify.app) or leave it blank for a random name. You can update the site name later.
+    ? Site name (optional): 
+
+
+7. After this step, your site will be created and you will be asked for `Publish directory`, type ***build*** here.
+
+
+    Please provide a publish directory 
+    
+    ? Publish directory build
+    
+
+ With this, your site will be published and you will be provided with a draft URL.
+ 
+
+    Deploying to draft URL...
+    ✔ Finished hashing 19 files
+    ✔ CDN requesting 10 files
+    ✔ Finished uploading 10 assets
+    ✔ Draft deploy is live!
+    
+    Logs:https://app.netlify.com/sites/serene-fermi-6d50a8/deploys/5f1194c3b903cadb238eabb4        
+    Website Draft URL: https://5f1194c3b903cadb238eabb4--serene-fermi-6d50a8.netlify.app
+    
+    If everything looks good on your draft URL, deploy it to your main site URL with the --prod flag.
+    netlify deploy --prod
+
+Go to this draft URL and if everything checks, we can deploy the website to the main site URL as you can see in the message above.
+
+
+8. Run the following command to deploy to *production*.
+
+
+     netlify deploy --prod
+
+It will ask for the `Publish directory` one final time, type ***build*** and hit enter. That’s it, you will be provided with two URLs.
+
+
+    Unique Deploy URL: https://5f11977085ef8fafe7535ff9--serene-fermi-6d50a8.netlify.app
+    Website URL:       https://serene-fermi-6d50a8.netlify.app
+
+The difference between these two URLs is that  `Unique Deploy URL` points to a specific version of your application. For example, if you make a change in your application and deploy again, you will  get another `Unique Deploy URL` that is specific for that change. Your `Website URL` is the main URL of your app which corresponds to the latest version of your application.
+
+**404 - Page not found error**
+This is an error that you might encounter if your application uses a router like React Router. We will not go into details about what causes it but will discuss how you can solve this.
+In your ***build*** folder create a new file called `_redirects` and add following to it.
+
+
+    /*    /index.html  200
+
+After this you will need to redeploy your application, this [404 error](https://community.netlify.com/t/404-error-when-submitting-form/6554) question on the Netlify community might help.
+
+## With this, your project has been successfully deployed. 
+
+Read more about [Netlify](https://docs.netlify.com/).
+
+
+----------
+# [GitHub Pages](https://pages.github.com/)
+
+One of the fastest and most used method by beginners to deploy websites is GitHub Pages, it is easier to maintain and with GitHub actions, you get the ablity to trigger automatic deployments, configure CI/CD and much [more](https://github.com/marketplace?type=actions).
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594992170164_image.png)
+
+
+
+## Steps to Deploy
+1. If you haven’t already created a GitHub account then create one, and then create a repository for your application. Now in your terminal, initialize local directory as a Git repository, commit all the changes and push it to remote, by running the following command int project root
+
+
+     git init
+     git add .
+     git commit -m "initial commit"
+     git remote add origin <your-github-repository-url>.git
+     git push -u origin master
+
+You will get this repository URL when you create a new repository.
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594991289500_image.png)
+
+
+With this, your project will be pushed to GitHub.
+
+
+2. In your project’s `package.json` add a `homepage` field like this
+
+
+    "homepage": "https://myusername.github.io/my-app"
+
+Where `myusername` is your GitHub username and `my-app` is your repository’s name.
+
+
+3. Next, install `gh-pages` in your project.
+
+
+    npm install --save gh-pages
+
+
+4. In your `package.json`, add the following scripts
+
+
+    "scripts": {
+    +   "predeploy": "npm run build",
+    +   "deploy": "gh-pages -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    }
+
+`predeploy` and `deploy` are the only addition to the scrips, `predeploy` will automatically run before `deploy` and make sure the latest build of the application is being deployed.
+
+
+5. Run the following command to deploy the application
+
+
+     npm run deploy
+
+This command will create a new branch named `gh-pages` in your project’s GitHub repository. You may need to set **Source** under GitHub Pages option ****in your repository’s settings to `gh-pages branch`. 
+
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594992080826_image.png)
+
+
+
+## With this, your project has been successfully deployed. 
+
+Read more about [GitHub Pages](https://pages.github.com/)
+
+
+----------
+# [Heroku](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwj_-sDwttbqAhWFIbcAHdWJBo4QFjAAegQIARAC&url=https%3A%2F%2Fwww.heroku.com%2F&usg=AOvVaw1V4lhSv6mb_lZj6UUCUXpS)
+
+Heroku is a cloud application platform that has been in the market since 2007 and has attracted a large number of developers over time, one of the reasons being it support most  of the programming languages like Go, Nodejs, Clojure, etc. 
+
+
+![](https://cdn.buttercms.com/T27FzLr5TIySqJ0mCObR)
+
+
+
+
+## Steps to deploy
+## Heroku CLI
+1. Like most of the other first steps, create a free account on [Heroku](https://signup.heroku.com/) if haven’t already.
+2. Install `heroku-cli` globally by running the following command
+
+
+    npm install -g heroku
+
+There are many different installation methods that you can read [here](https://devcenter.heroku.com/articles/heroku-cli).
+
+
+3. Login to `heroku-cli`, by running the following command
+
+
+    heroku login
+
+You will then be prompted to login to your account in the browser. Click **Log In.** 
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594992832051_image.png)
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594992846899_image.png)
+
+4. We will use [Heroku Buildpack for create-react-app](https://github.com/mars/create-react-app-buildpack#user-content-create-the-heroku-app) for quick deployment. Here is all the code you will need, you can copy/paste and deploy in one go.
+
+
+    git init
+    heroku create -b https://github.com/mars/create-react-app-buildpack.git
+    git add .
+    git commit -m "react-create-app on Heroku"
+    git push heroku master
+    heroku open
+
+This might be the fastest way to deploy via terminal, we don’t have  to answer any prompts as we did in other CLIs.
+You can read more about this zero-config deploy [here](https://blog.heroku.com/deploying-react-with-zero-configuration).
+
+
+## Heroku Dashboard
+
+Another way to deploy with heroku is by using their dashboard, here are the steps to do so.
+
+
+1. Make sure your project is stored in a GitHub repository.
+
+
+2. Go to your [Heroku dashboard](https://dashboard.heroku.com/apps) and click ***New*** and then **Create new app**.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594994900263_image.png)
+
+    3 You willl  be prompted to give your project an **App name,** type your application name, and click **Create app**.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594995067800_image.png)
+
+4. After creating an app, sync your GitHub repository. You will see something like this on your app dashboard.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594995236242_image.png)
+
+5. Once you have successfully connected your GitHub with Heroku, you can now search for the project repository and deploy it. Select your project from the list of repositories.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594995320651_image.png)
+
+6. You will now have two choices **Manual deploy** or **Automatic Deploy,** for this tutorial we will go with Manual Deploy, click on **Deploy Branch** under **Manual Deploy** and your application will be deployed once the build process completes.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1594995663518_image.png)
+
+
+
+## With this, your project has been successfully deployed. 
+
+Read more about [Heroku](https://devcenter.heroku.com/).
+
+----------
+# [Surge](https://surge.sh/)
+
+Surge is probably one of the fastest way to deploy frontend projects. Compared to other CLI, it requires very less configuration. Another difference is that you create a Surge account directly from the terminal when you are using it for the first time. 
+
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595051056338_image.png)
+
+
+
+## Steps to Deploy
+1. To deploy the latest ***build*** of the project, run the following command in the project root directory
+
+
+    npm run build
+
+
+2. Install Surge CLI globally
+
+
+    npm install -g surge
+
+
+3. Run `surge` command inside ***build*** folder 
+
+
+    cd build
+    surge
+
+
+4. Follow the prompts, first, you will be asked for an email and a password
+
+
+       Welcome to surge! (surge.sh)
+       Login (or create surge account) by entering email & password.
+    
+              email: admin@ashusingh.me
+              password:
+    
+
+
+5. Before filling any other prompts, it might be a good idea to confirm your Surge account
+
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595051720096_image.png)
+
+
+
+6. Now back in our terminal, you will be asked to confirm your project directory hit enter. Then you will be provided with the domain of your project, again hit enter.
+
+
+            project: D:\code\react-example-deploy\build\
+            domain: tremendous-person.surge.sh 
+
+With this your application will be published.
+
+
+       Success! - Published to outstanding-scent.surge.sh
+
+**pushState API**
+You might want to rename `index.html` to `200.html` in your build folder before surging to support HTML5 `pushState API`. Read more about this [here](https://surge.sh/help/adding-a-200-page-for-client-side-routing).
+
+**Aborted Error**
+You may run into an Aborted error, try to run the `surge` command again, read more about this [here](https://github.com/sintaxi/surge/issues/55).
+
+
+## With this, your project has been successfully deployed. 
+
+Read more about [Surge](https://surge.sh/help/getting-started-with-surge).
+
+
+----------
+# [Render](https://render.com/)
+
+Render, the winner of Startup Battlefield at [Disrupt SF 2019](https://techcrunch.com/2019/10/04/and-the-winner-of-startup-battlefield-at-disrupt-sf-2019-is-render/), founded in 2018, is a new and rising cloud platform. While hosting sites on Render is free, you need to pay for other services like databases, cron jobs, Docker containers, etc. You can read more about it [here](https://render.com/pricing). Both Heroku and Render classify as Platform as a Service.
+
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595054527441_image.png)
+
+## Steps to Deploy
+1. Make sure your project is stored in a GitHub repository.
+2. Create an account on [render](https://dashboard.render.com/).
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595054336618_image.png)
+
+3. Once you have created an account, click **New Web Service** on the dashboard.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595054438556_image.png)
+
+4. If this is your first time using Render, you will need to connect your GitHub or GitLab, wherever your repository is stored.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595054628160_image.png)
+
+
+
+5. Once connected search for your project repository and select it. After this you will need to give your web service a unique name, Render will auto-detect if your application is bootstrapped with `create-react-app` and will fill the configuration accordingly.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595054809734_image.png)
+
+6. Click **Create Web Service**, after which your project will be deployed.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595054993093_image.png)
+
+
+**Client-Side Routing**
+If your project uses something like React router, you will need to redirect all routing requests to `index.html`. To do that go to **Redirects/Rewrites** tab for your service and add a rule like this and save the changes.
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595055620758_image.png)
+
+
+
+## With this, your project has been successfully deployed. 
+
+Read more about [Render](https://render.com/docs).
+
+
+----------
+
+
+# [Roast](https://www.roast.io/)
+
+Roast is another web hosting platform that you can use to deploy SPA’s(Single Page Applications).
+It is very simple to configure and use. Roast Docs don’t mess around and provide to the point information. 
+
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595056834473_image.png)
+
+
+
+## Steps to Deploy
+1. Create a Roast account, if you haven’t already.
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595055792495_image.png)
+
+2. Install Roast CLI globally.
+
+
+    npm install -g roast
+
+
+3. To deploy latest build run the following command in your project directory
+
+
+    npm run build
+
+
+4. Run the following command  to deploy with roast
+
+
+    roast deploy
+
+After this, you will be authenticated.
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595056153151_image.png)
+
+5. Then in the terminal, you will be asked to create a new site, answer **Yes**. Then you will be asked for `Path to deploy` which will be ***build***  folder.
+
+
+    ? No site id specified, create a new site Yes 
+    ? Path to deploy? build
+
+
+6. Your application is now deployed.
+
+
+    �  Roasting deploy from folder D:\code\react-example-deploy\build
+    
+    ☕  Deploy roasted!
+    
+    ✨  https://witty-surprise-3068.roast.io
+
+**404 error**
+To return `index.html` instead of 404, create a `_redirects` file inside ***build*** with the following code.
+
+
+    /* /index.html 200
+
+Once you have added this file, you will need to redeploy your app with `roast deploy` and it’s done.
+You can now see this redirect in your Roast dashboard.
+
+![](https://paper-attachments.dropbox.com/s_3818F1AC2487BCF2FE7C755E84E66D367EDF754C0C28E3E5EB2F7846E5E956E2_1595056806392_image.png)
+
+
+You can read more about this [here](https://www.roast.io/docs/config/redirects).
+
+
+## With this, your project has been successfully deployed. 
+
+Read more about [Roast](https://www.roast.io/docs).
+
+# 9. Moovweb XDN
+
+[Moovweb XDN](https://developer.moovweb.com/guides/overview) (e**X**perience **D**elivery **N**etwork) is an all-in-one platform to develop, deploy, preview, experiment on, monitor, and run your application. 
+
+[Moovweb’s Free tier](https://www.moovweb.com/pricing) will be more than sufficient for your side projects.
+
+Start by creating a [Moovweb XDN account](https://moovweb.app/signup).
+
+
+![](https://paper-attachments.dropbox.com/s_283CC7E27E951F12FE21A577DDDFAED2C672DADCDD3B49CD8AEE0237EBBCF993_1604475886244_image.png)
+
+
+**Note**: **XDN only supports Node.js version 12 and higher.**
+
+Check your Node version by running the following command.
+
+
+    node --version
+
+Install XDN CLI globally.
+
+
+    npm i -g @xdn/cli
+
+After installing the XDN CLI, run the following command to authenticate yourself.
+
+
+    xdn login
+
+You will see the following output in the terminal.
+
+
+    Authenticating user!
+
+After this, You will be redirected to the Moovweb page and see the following message.
+
+![](https://paper-attachments.dropbox.com/s_283CC7E27E951F12FE21A577DDDFAED2C672DADCDD3B49CD8AEE0237EBBCF993_1604556187421_image.png)
+
+
+To deploy the latest build, run the following command in your project directory.
+
+
+    npm run build
+
+In your project’s root directory, run the following command in the terminal.
+
+
+    xdn init
+
+This command will install all the dependencies and files required by XDN in your project. After a few minutes, you will see the following message in your terminal.
+
+
+    
+    ✔ installing @xdn/core, @xdn/cli, @xdn/prefetch, @xdn/devtools... done.
+    > routes.js not found, creating...
+    > xdn.config.js not found, creating...
+    
+    Added the following scripts:
+    
+    xdn - Run xdn commands using the local version of the XDN CLI.
+    xdn:start - Simulate your app on the XDN locally.
+    xdn:build - Build your app for deployment on the XDN.
+    xdn:deploy - Build and deploy your app on the XDN.
+    
+    🎉 Your app is now ready to deploy on the MOOVWEB XDN!
+
+You will notice some new files will be created after the `xdn init`  command. 
+Modify `routes.js` in the root like this to serve the `build` directory.  
+
+
+    // routes.js
+    const { Router } = require('@xdn/core/router')
+    const ONE_HOUR = 60 * 60
+    const ONE_DAY = 24 * ONE_HOUR
+    const ONE_YEAR = 365 * ONE_DAY
+    const edgeOnly = {
+      browser: false,
+      edge: { maxAgeSeconds: ONE_YEAR },
+    }
+    const edgeAndBrowser = {
+      browser: { maxAgeSeconds: ONE_YEAR },
+      edge: { maxAgeSeconds: ONE_YEAR },
+    }
+    module.exports = new Router()
+      .prerender([{ path: '/' }])
+      // js and css assets are hashed and can be far-future cached in the browser
+      .get('/static/:path*', ({ cache, serveStatic }) => {
+        cache(edgeAndBrowser)
+        serveStatic('build/static/:path*')
+      })
+      // all paths that do not have a "." as well as "/"" should serve the app shell (index.html)
+      .get('/:path*/:file([^\\.]+|)', ({ cache, appShell }) => {
+        cache(edgeOnly)
+        appShell('build/index.html')
+      })
+      // all other paths should be served from the build directory
+      .get('/:path*', ({ cache, serveStatic }) => {
+        cache(edgeOnly)
+        serveStatic('build/:path*')
+      })
+    
+
+To  [](https://developer.moovweb.com/guides/react)[deploy](https://developer.moovweb.com/guides/react#section_create_react_app_example) your React app, run the following command.
+
+
+    xdn deploy
+
+After a few minutes, your site will be deployed.
+
+You can read more about deploying a React app with Moovweb XDN [here](https://developer.moovweb.com/guides/react).
+
+
+# 10. GitLab Pages
+
+[GitLab pages](https://docs.gitlab.com/ee/user/project/pages/) can be also used to publish static sites directly from the repository in GitLab. With GitLab pages, you can easily connect your custom domains and TLS certificates.
+
+Create a [GitLab](https://gitlab.com/users/sign_up) account if you haven’t already.
+
+After creating an account, you will see the following options to add your React app.
+
+![](https://paper-attachments.dropbox.com/s_283CC7E27E951F12FE21A577DDDFAED2C672DADCDD3B49CD8AEE0237EBBCF993_1604573088894_image.png)
+
+
+If your project is already present on GitHub, then select the **Import project** option and import the project. Otherwise, select the **Create blank project** option and create an empty project.
+
+Give your project a name and click **Create project**.
+
+
+![](https://paper-attachments.dropbox.com/s_283CC7E27E951F12FE21A577DDDFAED2C672DADCDD3B49CD8AEE0237EBBCF993_1604593195944_image.png)
+
+
+On the next page, you will see various commands to add your React project, configured according to your credentials.
+
+In your terminal, initialize the local directory as a Git repository, commit all the changes, and push it to remote by running the following command in the project root.
+
+
+    git init
+    git remote add origin git@gitlab.com:<username/project-name>.git
+    git add .
+    git commit -m "Initial commit"
+    git push -u origin master
+
+Make sure to replace  `<username/project-name>` with your username and project name.
+
+For example: 
+
+
+    git remote add origin git@gitlab.com:lelouchB/react-material-ui.git
+
+In your project’s `package.json` add a `homepage` field, like this:
+
+
+    "homepage": "https://myusername.gitlab.io/my-app"
+
+Where `myusername` is your username and `my-app` is the name of your project. Here is an example of the same.
+
+
+    "homepage":"https://lelouchB.gitlab.io/react-material-ui/"
+
+Create a new file named `.gitlab-ci.yml` and add the following code to it.
+
+
+    image: node:10 # change to match your node version
+    
+    cache:
+      paths:
+        - node_modules/
+    
+    before_script:
+      - rm -rf build
+      - npm install
+    
+    pages:
+      stage: deploy
+      script:
+        - npm run build
+        - rm -rf public
+        - mv build public
+      artifacts:
+        paths:
+          - public
+      only:
+        - master
+
+And that’s it, after committing this file. A pipeline will start which will deploy your React app to GitLab pages. You can see this pipeline under `CI/CD` tab.
+
+
+![](https://paper-attachments.dropbox.com/s_283CC7E27E951F12FE21A577DDDFAED2C672DADCDD3B49CD8AEE0237EBBCF993_1604593307732_image.png)
+
+
+After the pipeline has passed successfully, it may take up to 30 minutes before the site is available after the first deployment, so be patient.
+
+
+![](https://paper-attachments.dropbox.com/s_283CC7E27E951F12FE21A577DDDFAED2C672DADCDD3B49CD8AEE0237EBBCF993_1604593330775_image.png)
+
+
+You can manage your React app under the  `Settings/Pages` tab. 
+
+![](https://paper-attachments.dropbox.com/s_283CC7E27E951F12FE21A577DDDFAED2C672DADCDD3B49CD8AEE0237EBBCF993_1604593387447_image.png)
+
+
+Your app will be deployed to the same URL, as mentioned in the `homepage` field in `package.json`.
+
+
+## Here are a few other platforms worth checking out
+-  [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform/) 
+        You can deploy three static sites on **Starter** or free tier.
+- [StormKit](https://www.stormkit.io/)
+        Single app deployment on their free tier.
+- [Platform.sh](https://platform.sh/) 
+        30 days free trial.
+- [Bip](https://bip.sh/)
+        7 days free trial.
+
+
+
+# Conclusion 
+
+Now that we have discussed 8 different ways of deploying React, you should try them out before deciding the one that you like and which aligns with your deployment requirements. 
+
+For the next steps, you should try to add custom domains to your deployed application, it is good to have a distinctive domain for projects. All of them have different ways to add a custom domain, some are easy while some are relatively complex. It will be a great exercise to figure it out.
+
+Happy Coding!
+
+
