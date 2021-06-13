@@ -21,21 +21,19 @@ const PostWrapper = styled.div`
   img {
     max-width: 640px;
   }
-
-  pre {
-    overflow-x: auto;
-    white-space: pre-wrap;
-    border-left: 3px solid #f36d33;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.6;
-    max-width: 100%;
-    padding: 1em 1.5em;
-  }
   a {
     color: blue;
     text-decoration: underline;
+  }
+  pre{
+    overflow-x: auto;
+    white-space: pre-wrap;
+    page-break-inside: avoid;
+    font-size:15px;
+    background: rgb(1, 22, 39);
+    border-radius: 2px;
+    line-height: 1.6;
+    padding: 1em 1.5em;
   }
   strong {
     font-weight: 700;
@@ -82,17 +80,7 @@ const PostWrapper = styled.div`
     padding: 0.15rem;
     text-align: left;
   }
-  @media print {
-    pre {
-      overflow-x: auto;
-      white-space: pre-wrap;
-      white-space: -moz-pre-wrap !important;
-      white-space: -pre-wrap;
-      white-space: -o-pre-wrap;
-      word-wrap: break-word;
-      background: #fff;
-    }
-  }
+
 `
 
 const TitleWrapper = styled.div`

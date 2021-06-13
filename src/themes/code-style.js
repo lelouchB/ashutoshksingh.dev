@@ -5,14 +5,11 @@ import { css } from "styled-components"
 
 export const codeStyle = css`
   font-family: "Victor Mono", "Courier New", Courier, monospace;
+
   [data-name="live-editor"] {
-    font-size: ${({ theme }) => theme.fontSize["2xl"]};
     font-weight: 400;
     textarea,
-    pre {
-      padding: ${({ theme }) => theme.spacing[1]} !important;
-    }
-  }
+    
   [data-name="live-preview"] {
     padding: ${({ theme }) => `calc(${theme.spacing[1]}) + 10px`} !important;
     background-color: ${({ theme }) => theme.colors.red[500]};

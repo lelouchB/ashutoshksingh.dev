@@ -14,7 +14,8 @@ const Pre = styled.pre`
   padding: 0.5em;
   overflow-x: auto;
   border-radius: 3px;
-
+  white-space: pre-wrap;
+  max-width: 640px;
   & .token-lline {
     line-height: 1.3em;
 
