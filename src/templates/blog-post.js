@@ -19,7 +19,7 @@ const PostWrapper = styled.div`
     margin: 0.625rem 0;
   }
   img {
-    max-width: 480px;
+    max-width: 640px;
   }
 
   pre {

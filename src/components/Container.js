@@ -8,7 +8,7 @@ const ContainerWrapper = styled.div`
   height: 100%;
   display: block;
   margin: auto;
-  max-width: 640px;
+  max-width: 720px;
 `
 export const Container = ({ children }) => {
   return (
