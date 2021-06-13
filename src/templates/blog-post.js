@@ -33,10 +33,6 @@ const PostWrapper = styled.div`
     max-width: 100%;
     padding: 1em 1.5em;
   }
-  code {
-    background: var(--colour-on-secondary, #e2e8f0);
-    padding: 0px 3px;
-  }
   a {
     color: blue;
     text-decoration: underline;
