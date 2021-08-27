@@ -48,7 +48,7 @@ export const Footer = () => {
     instagramUsername: `singhashutoshk`,
     siteUrl: `https://ashutoshksingh.dev`,
   }
-  const linkedinUrl = `https://www.linkedin.com/in/ashutosh-singh-550a6a178`
+  const linkedinUrl = `https://www.linkedin.com/`
   const instagramUrl = `https://www.instagram.com/${config.instagramUsername}`
   const mailToUrl = `mailto:${config.email}?Subject=Hello`
   const twitterUrl = `https://twitter.com/${config.twitterUsername}`
